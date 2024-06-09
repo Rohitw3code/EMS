@@ -1,0 +1,100 @@
+.card {
+  max-width: 360px; /* Reduced width from 480px to 360px */
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.input-field {
+  width: 90%; /* Reduced width from 100% to 90% */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.camera-container, .cred {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.camera {
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.snapshot, .camera {
+  width: 100%; /* Full container width */
+  max-width: 450px;
+  height: auto;
+}
+
+.camera-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.snapshot-btn, .reset-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.snapshot-btn:hover, .reset-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+.auth-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.auth-btn:hover {
+  background-color: #218838;
+}
+
+.error-message {
+  color: white;
+  background-color: #dc3545;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,99 @@
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+}
+
+
+.link {
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: blueviolet;
+}
+
+.capture-train-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.camera {
+  border-radius: 30px;
+}
+
+.camera-buttons {
+  margin-bottom: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.captured-effect {
+  color: red;
+}
+
+.card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(107, 104, 104, 0.1);
+}
+
+.camera-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.cred {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cred input,
+.cred button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.register-btn {
+  background-color: #007bff;
+  color: #fff;
+  width: 10%;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(241, 39, 39);
+  justify-content: center;
+  display: flex;
+  color: white;
+}
+
+.photo-btn {
+  border-radius: 100%; /* Make the button round */
+  background-color: red; /* Set the background color to red */
+  color: white; /* Set text color to white */
+  border: none; /* Remove border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  outline: none; /* Remove default focus outline */
+}
+
+.photo-btn:hover {
+  background-color: darkred; /* Change background color on hover */
+}
