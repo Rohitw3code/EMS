@@ -22,9 +22,9 @@ function Home() {
                 Home
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/admin-login" className="smoothscroll">Admin</a>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
