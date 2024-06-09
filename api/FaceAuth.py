@@ -62,16 +62,6 @@ def saveImages(studentId, email, student_name, photos):
         res = get_relative_paths(studentId)
         return res
 
-def check():
-    user_image1 = "./captured/1/rohit_photo1_face1.png"
-    user_image2 = "./captured/4/hello_photo1_face1.png"
-
-    res = DeepFace.verify(img1_path=user_image1, img2_path=user_image2)
-
-    print("res : ",res)
-
-check()
-
 
 def get_relative_paths(studentId):
     user_image_path = f"./captured/{studentId}/"
