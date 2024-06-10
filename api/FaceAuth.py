@@ -23,7 +23,7 @@ def saveWisperImage(studentId,snap):
     cv2.imwrite(face_filename, img_np)
 
 
-def faceAuth(studentId,email,snap):
+def faceAuth(snap):
     image_bytes = base64.b64decode(snap.split(',')[1])
     nparr = np.frombuffer(image_bytes, np.uint8)
     img_np = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
@@ -38,7 +38,20 @@ def faceAuth(studentId,email,snap):
         return True
     else:
         return False
-    
+
+def checkFacePresent(path):
+    img_np = cv2.imread(path,cv2.IMREAD_COLOR)
+    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    faces = face_cascade.detectMultiScale(
+        img_np,
+        scaleFactor=1.3,
+        minNeighbors=3,
+        minSize=(30, 30)
+    )    
+    if len(faces) > 0:
+        return True
+    else:
+        return False
     
 def saveImages(studentId, email, student_name, photos):
     # try:
@@ -66,7 +79,9 @@ def saveImages(studentId, email, student_name, photos):
 def get_relative_paths(studentId):
     user_image_path = f"./captured/{studentId}/"
     user_image_path = user_image_path+os.listdir(user_image_path)[0]
-    print(user_image_path)
+
+    if checkFacePresent(user_image_path) == False:
+        return {'success':False,'error':'Face Not Detected'}
 
     for folder in os.listdir("./captured"):
         temp_image = f"./captured/{folder}/"

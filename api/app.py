@@ -38,7 +38,7 @@ def login():
         if email.strip() == '' or studentId.strip() == '':
             return jsonify({'success': False, 'error': 'Field is empty'})
         
-        verified = faceAuth(studentId,email,snap)
+        verified = faceAuth(snap)
 
         if verified == False:
             return jsonify({"success": False,"error":"Face not detected try again"})  # Existing user found
